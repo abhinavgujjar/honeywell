@@ -23,9 +23,10 @@ namespace CricInfo.Controllers
 
         public ActionResult ByArticle(int articleId)
         {
-            var articles = db.Comments.Where(c => c.ArticleId == articleId).ToList();
+            var comments = db.Comments.
+                Where(c => c.ArticleId == articleId).ToList();
 
-            return View(articles);
+            return View(comments);
         }
         
         //

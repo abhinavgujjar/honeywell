@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CricInfo.Models.Comment>
+
+
+@foreach (var item in Model)
+{
+    <div class="well">
+        @item.CommentText
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @(item.Rating*100/10)%;">
+                <span class="sr-only">60% Complete</span>
+            </div>
+        </div>
+    </div>
+}
+
