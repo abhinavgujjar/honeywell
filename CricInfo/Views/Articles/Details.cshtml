@@ -1,0 +1,20 @@
+﻿@model CricInfo.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<fieldset>
+    <legend>Article</legend>
+
+    <div>
+    <h3>@Model.Title</h3>
+    <p>@Model.Body</p>
+    <div><strong>@Model.DatePublished</strong></div>
+    <hr />
+</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

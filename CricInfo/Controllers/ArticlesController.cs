@@ -23,5 +23,14 @@ namespace CricInfo.Controllers
             return View(articles);
         }
 
+        public ActionResult Details(int id)
+        {
+            var articles = (new ArticlesProvider()).GetArticles();
+            var targetArticle = articles.Where(a => a.Id == id).Single();
+
+            return View(targetArticle);
+
+        }
+
     }
 }

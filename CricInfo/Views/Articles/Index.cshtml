@@ -7,8 +7,8 @@
 <h2>Articles</h2>
 @foreach ( var article in Model){
 <div>
-    <h3>@article.Title</h3>
-    <p>@article.Body</p>
+    <h3>@Html.ActionLink(article.Title, "Details", new {id = article.Id})</h3>
+    <p>@article.Body.Substring(0, 300)</p>
     <div><strong>@article.DatePublished</strong></div>
     <hr />
 </div>
