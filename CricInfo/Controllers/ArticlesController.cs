@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CricInfo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,13 @@ namespace CricInfo.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            //1. Prepare model
+            var articles = (new ArticlesProvider()).GetArticles();
+
+            //2. Select View
+
+            //3. make the model available to the view
+            return View(articles);
         }
 
     }

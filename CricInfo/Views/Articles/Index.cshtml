@@ -1,5 +1,15 @@
-﻿@{
+﻿@model List<CricInfo.Models.Article>
+
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Articles</h2>
+@foreach ( var article in Model){
+<div>
+    <h3>@article.Title</h3>
+    <p>@article.Body</p>
+    <div><strong>@article.DatePublished</strong></div>
+    <hr />
+</div>
+}
