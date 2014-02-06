@@ -1,0 +1,43 @@
+﻿@model CricInfo.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Comment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArticleId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArticleId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CommentText)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CommentText)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCommented)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCommented)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rating)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
