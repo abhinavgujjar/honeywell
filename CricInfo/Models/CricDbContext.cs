@@ -10,5 +10,6 @@ namespace CricInfo.Models
     {
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<LiveScore> LiveScores { get; set; }
     }
 }

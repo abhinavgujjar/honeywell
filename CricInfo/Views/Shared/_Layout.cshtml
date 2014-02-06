@@ -28,7 +28,14 @@
     </nav>
 
     <div class="container">
-        @RenderBody()
+        <div class="row">
+            <div class="col-md-8">
+                @RenderBody()
+            </div>
+            <div class="col-md-4">
+                @Html.Action("Index", "LiveScore")
+            </div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

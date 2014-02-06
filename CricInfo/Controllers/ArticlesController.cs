@@ -51,8 +51,7 @@ namespace CricInfo.Controllers
 
         public ActionResult Details(int id)
         {
-            var articles = (new ArticlesProvider()).GetArticles();
-            var targetArticle = articles.Where(a => a.Id == id).Single();
+            var targetArticle = db.Articles.Find(id);
 
             return View(targetArticle);
 

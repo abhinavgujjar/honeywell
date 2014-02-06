@@ -1,0 +1,11 @@
+﻿@model List<CricInfo.Models.LiveScore>
+
+@foreach (var score in Model)
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>@score.CountryA vs. @score.CountryB</h4>
+            <h4>@score.Score</h4>
+        </div>
+    </div>
+}

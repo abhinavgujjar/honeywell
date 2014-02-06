@@ -16,6 +16,32 @@ namespace CricInfo.Migrations
         protected override void Seed(CricInfo.Models.CricDbContext context)
         {
             //  This method will be called after migrating to the latest version.
+            context.LiveScores.AddOrUpdate(
+                p => p.CountryA,
+                new LiveScore()
+                {
+                    CountryA = "IND",
+                    CountryB = "NZ",
+                    Overs = 32,
+                    Score = "230/7"
+                },
+                new LiveScore()
+                {
+                    CountryA = "SA",
+                    CountryB = "AUS",
+                    Overs = 45,
+                    Score = "378/4"
+                },
+                new LiveScore()
+                {
+                    CountryA = "ENG",
+                    CountryB = "SL",
+                    Overs = 11,
+                    Score = "111/1"
+                }
+
+                );
+
 
             context.Articles.AddOrUpdate(
                 p => p.Author,

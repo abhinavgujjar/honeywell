@@ -4,7 +4,7 @@
 @foreach (var item in Model)
 {
     <div class="well  well-sm">
-        @item.CommentText
+        
         <br />
         <br />
         <div class="progress">
@@ -12,6 +12,8 @@
                 <span class="sr-only">60% Complete</span>
             </div>
         </div>
+
+        @item.CommentText
     </div>
 }
 
