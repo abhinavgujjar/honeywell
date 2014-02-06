@@ -1,4 +1,4 @@
-﻿@model List<CricInfo.Models.Article>
+﻿@model List<CricInfo.ViewModel.ArticleIndexViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -7,9 +7,10 @@
 <h2>Articles</h2>
 @foreach ( var article in Model){
 <div>
-    <h3>@Html.ActionLink(article.Title, "Details", new {id = article.Id})</h3>
+    <h3>@Html.ActionLink(article.Title, "Details", new {id = article.ArticleId})</h3>
     <p>@article.Body.Substring(0, 300)</p>
-    <div><strong>@article.DatePublished</strong></div>
+    <span><strong>@article.PublishDate</strong></span>
+    <div>@article.AverageRating</div>
     <hr />
 </div>
 }

@@ -18,3 +18,5 @@
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+<hr />
+@Html.Action("ByArticle", "Comment", new {articleId = Model.Id})

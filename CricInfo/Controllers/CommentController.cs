@@ -21,12 +21,13 @@ namespace CricInfo.Controllers
             return View(db.Comments.ToList());
         }
 
+        [ChildActionOnly]
         public ActionResult ByArticle(int articleId)
         {
             var comments = db.Comments.
                 Where(c => c.ArticleId == articleId).ToList();
 
-            return View(comments);
+            return PartialView(comments);
         }
         
         //
