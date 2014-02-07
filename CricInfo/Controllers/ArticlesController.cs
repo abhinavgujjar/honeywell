@@ -3,6 +3,8 @@ using CricInfo.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -53,12 +55,34 @@ namespace CricInfo.Controllers
             //2. Select View
 
             //3. make the model available to the view
-            return View(viewModels);
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_ArticleResults", viewModels);
+            }
+            else
+            {
+                return View(viewModels);
+            }
+
+            
         }
 
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
             var targetArticle = db.Articles.Find(id);
+
+
+            var client = new HttpClient();
+
+            
+            var response = await client.GetAsync("http://localhost:12803/api/Ranking");
+
+            response.EnsureSuccessStatusCode();
+            string responseBody = await response.Content.ReadAsStringAsync();
+            // Above three lines can be replaced with new helper method below 
+            // string responseBody = await client.GetStringAsync(uri);
+
+            Console.WriteLine(responseBody);
 
             return View(targetArticle);
 

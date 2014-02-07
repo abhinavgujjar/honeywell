@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<CricInfo.Models.Comment>
 
+<form>
+    <input type="hidden" name="ArticleId" value="@ViewBag.ArticleId"/>
+    <input name="CommentText" type="text" />
+    <input name="DateCommented" type="text" />
+    <input name="Rating" type="number" />
+</form>
 
 @foreach (var item in Model)
 {

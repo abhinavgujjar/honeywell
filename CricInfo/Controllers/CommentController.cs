@@ -26,6 +26,8 @@ namespace CricInfo.Controllers
         {
             var comments = db.Comments.
                 Where(c => c.ArticleId == articleId).ToList();
+            
+            ViewBag.ArticleId = articleId;
 
             return PartialView(comments);
         }
@@ -60,8 +62,16 @@ namespace CricInfo.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (comment.DateCommented.Year < DateTime.Now.Year)
+                {
+                    ModelState.AddModelError("DateCommented", "Cannot add a date in the past");
+                    return View(comment);
+                }
+
+                comment.SecureField = 9998; //got this from encryptions algorithm
                 db.Comments.Add(comment);
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
@@ -88,6 +98,7 @@ namespace CricInfo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Comment comment)
         {
+
             if (ModelState.IsValid)
             {
                 db.Entry(comment).State = EntityState.Modified;

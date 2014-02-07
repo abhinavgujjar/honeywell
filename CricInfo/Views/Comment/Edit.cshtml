@@ -14,14 +14,9 @@
         <legend>Comment</legend>
 
         @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.ArticleId)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ArticleId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ArticleId)
-            @Html.ValidationMessageFor(model => model.ArticleId)
-        </div>
+
 
         <div class="editor-label">
             @Html.LabelFor(model => model.CommentText)

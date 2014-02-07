@@ -1,31 +1,20 @@
 ﻿@model List<CricInfo.ViewModel.ArticleIndexViewModel>
 
-<h2>@ViewBag.SubTitle</h2>
-
-@using (Ajax.BeginForm("Index", "Articles", new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "resultsDiv", InsertionMode = InsertionMode.Replace }))
-{
-    <input name="searchTerm" type="text" />
-    <input type="submit" value="Search" />
+@section featured{
+    <div class="alert-warning">@Model[0].Title</div>
 }
 
-<div id="resultsDiv">
-    @foreach (var article in Model)
-    {
-        <div>
-            <h3>@Html.ActionLink(article.Title, "Details", new { id = article.ArticleId })</h3>
-            <p>@article.Body.Substring(0, 300)</p>
-            <span><strong>@article.PublishDate</strong></span>
-            <div>@article.AverageRating</div>
-            <br />
-            @Html.Partial("SocialMediaStats", article)
+<h2>@ViewBag.SubTitle</h2>
 
-            <hr />
-        </div>
-    }
+<form action="/api/Ranking" method="post">
+    <input name="Country" type="text" value="Zimbabwe"/>
+    <input name="Rank" type="number" value="17"/>
+    <input type="submit" value="Search" />
+</form>
+
+<div id="resultsDiv">
+    @Html.Partial("_ArticleResults")
 </div>
 @section scripts{
     @Scripts.Render("~/bundles/jqueryval")
-}
-@section featured{
-    <div class="alert-warning">@Model[0].Title</div>
 }

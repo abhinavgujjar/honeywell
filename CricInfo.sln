@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CricInfo", "CricInfo\CricIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CricInfo.Tests", "CricInfo.Tests\CricInfo.Tests.csproj", "{DCDA4F09-7198-4CE7-9C5F-3E02B3834299}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankingService", "RankingService\RankingService.csproj", "{633C6570-143D-4540-B70A-C4E8FDFEAD3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoker", "Invoker\Invoker.csproj", "{E2AB2C82-67DF-4BCB-882A-0A32A3E6BEB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{633C6570-143D-4540-B70A-C4E8FDFEAD3B} = {633C6570-143D-4540-B70A-C4E8FDFEAD3B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +26,14 @@ Global
 		{DCDA4F09-7198-4CE7-9C5F-3E02B3834299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDA4F09-7198-4CE7-9C5F-3E02B3834299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCDA4F09-7198-4CE7-9C5F-3E02B3834299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633C6570-143D-4540-B70A-C4E8FDFEAD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633C6570-143D-4540-B70A-C4E8FDFEAD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633C6570-143D-4540-B70A-C4E8FDFEAD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633C6570-143D-4540-B70A-C4E8FDFEAD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2AB2C82-67DF-4BCB-882A-0A32A3E6BEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AB2C82-67DF-4BCB-882A-0A32A3E6BEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AB2C82-67DF-4BCB-882A-0A32A3E6BEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AB2C82-67DF-4BCB-882A-0A32A3E6BEB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
