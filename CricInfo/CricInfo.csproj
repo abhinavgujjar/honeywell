@@ -133,6 +133,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LogAttribute.cs" />
     <Compile Include="MenuLink.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />

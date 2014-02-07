@@ -14,6 +14,7 @@ namespace CricInfo.Controllers
         //
         // GET: /Articles/
 
+        [Log]
         public ActionResult Index()
         {
             //a
