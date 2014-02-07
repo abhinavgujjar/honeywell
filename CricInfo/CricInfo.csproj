@@ -241,6 +241,7 @@
     <Content Include="Views\Comment\Delete.cshtml" />
     <Content Include="Views\Comment\ByArticle.cshtml" />
     <Content Include="Views\LiveScore\Index.cshtml" />
+    <Content Include="Views\Articles\SocialMediaStats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

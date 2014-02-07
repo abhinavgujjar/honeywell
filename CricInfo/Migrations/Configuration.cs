@@ -47,6 +47,10 @@ namespace CricInfo.Migrations
                 p => p.Author,
                 new Article()
                 {
+                    FbLikes = 12,
+                    Tweets = 5,
+                    PlusShares = 0,
+
                     Author = "Zlatan Ibrahimovic",
                     Title = @"Ibrahimovic brace takes PSG into fifth League Cup final",
                     Body = @"Zlatan Ibrahimovic struck a last-minute winner to put Paris St Germain in the French League Cup final with a 2-1 win at Nantes on Tuesday having opened the scoring as they boosted their hopes of a maiden domestic double.
@@ -57,6 +61,10 @@ The Sweden striker netted after five minutes with a splendid 25-metre strike and
                 },
                 new Article()
                 {
+                    FbLikes = 389,
+                    Tweets = 12,
+                    PlusShares = 88,
+                    
                     Author = "Viswanathan Anand",
                     Title = @"Anand's disappointing time in Zurich Challenge ends with fifth place finish
 ",
@@ -68,6 +76,10 @@ Staying joint fourth spot on four points after the Classical games, Anand could 
                 },
                  new Article()
                 {
+                    FbLikes = 8000,
+                    Tweets = 3598,
+                    PlusShares = 24,
+                    
                     Author = "Brian McDermott",
                     Title = @"McDermott unsure about future as Leeds manager",
                     Body = @"Brian McDermott remains Leeds United manager but admits his future remains unclear after three days of upheaval at the Championship club.
@@ -102,6 +114,10 @@ Leeds, English champions in 1992, have failed to regain their top-flight status 
                 },
                  new Article()
                 {
+                    FbLikes = 55,
+                    Tweets = 32,
+                    PlusShares = 2,
+                    
                     Author = "Shaun Botterill",
                     Title = @"EPL PHOTOS: Chelsea's win at City throws open title race",
                     Body = @"Branislav Ivanovic's first-half cracker and Jose Mourinho's tactical mastery helped classy Chelsea claim a 1-0 win on Monday at Premier League title rivals Manchester City who failed to score at home for the first time this season.
@@ -115,6 +131,10 @@ City had chances to equalise but Chelsea, who also hit the woodwork three times,
                 },
                                  new Article()
                 {
+                    FbLikes = 55,
+                    Tweets = 32,
+                    PlusShares = 2,
+                    
                     DatePublished = DateTime.Now,
                     Author = "David Beckham",
                     Title = @"Beckham to announce franchise decision in Miami",

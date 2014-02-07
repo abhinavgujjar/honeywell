@@ -22,5 +22,10 @@ namespace CricInfo.Models
         public DateTime DatePublished { get; set; }
 
         public bool IsGoodArticle { get; set; }
+
+        //social media stats
+        public int FbLikes { get; set; }
+        public int Tweets { get; set; }
+        public int PlusShares { get; set; }
     }
 }

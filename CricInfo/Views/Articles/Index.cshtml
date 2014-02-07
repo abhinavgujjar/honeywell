@@ -11,6 +11,9 @@
     <p>@article.Body.Substring(0, 300)</p>
     <span><strong>@article.PublishDate</strong></span>
     <div>@article.AverageRating</div>
+    <br />
+    @Html.Partial("SocialMediaStats", article)
+
     <hr />
 </div>
 }

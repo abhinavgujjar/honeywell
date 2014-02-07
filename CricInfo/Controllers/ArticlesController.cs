@@ -29,6 +29,9 @@ namespace CricInfo.Controllers
                     Title = article.Title,
                     Body = article.Body,
                     PublishDate = article.DatePublished,
+                    FbLikes = article.FbLikes,
+                    Tweets = article.Tweets,
+                    PlusShares = article.PlusShares
                 };
 
                 var ratings = db.Comments.

@@ -12,5 +12,9 @@ namespace CricInfo.ViewModel
         public string Body { get; set; }
         public DateTime PublishDate { get; set; }
         public double AverageRating { get; set; }
+
+        public int FbLikes { get; set; }
+        public int Tweets { get; set; }
+        public int PlusShares { get; set; }
     }
 }

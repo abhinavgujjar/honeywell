@@ -8,15 +8,17 @@
     <legend>Article</legend>
 
     <div>
-    <h3>@Model.Title</h3>
-    <p>@Model.Body</p>
-    <div><strong>@Model.DatePublished</strong></div>
-    <hr />
-</div>
+        <h3>@Model.Title</h3>
+        <p>@Model.Body</p>
+        <div><strong>@Model.DatePublished</strong></div>
+        <br />
+        @Html.Partial("SocialMediaStats")
+        <hr />
+    </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
 <hr />
-@Html.Action("ByArticle", "Comment", new {articleId = Model.Id})
+@Html.Action("ByArticle", "Comment", new { articleId = Model.Id })
