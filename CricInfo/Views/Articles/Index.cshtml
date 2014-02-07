@@ -1,10 +1,8 @@
 ﻿@model List<CricInfo.ViewModel.ArticleIndexViewModel>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Articles</h2>
+<h2>@ViewBag.SubTitle</h2>
+
 @foreach ( var article in Model){
 <div>
     <h3>@Html.ActionLink(article.Title, "Details", new {id = article.ArticleId})</h3>

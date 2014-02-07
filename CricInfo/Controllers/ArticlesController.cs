@@ -16,6 +16,9 @@ namespace CricInfo.Controllers
 
         public ActionResult Index()
         {
+            //a
+            ViewData["SubTitle"] = "great Articles";
+
             //1. Prepare model
             var articles = db.Articles.ToList();
 
