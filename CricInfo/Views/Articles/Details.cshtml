@@ -22,3 +22,17 @@
 </p>
 <hr />
 @Html.Action("ByArticle", "Comment", new { articleId = Model.Id })
+<script type="text/javascript">
+
+    if ( @if ( Request.IsAuthenticated) { <text>true</text> } else { <text>false</text>} )
+    {
+        alert('Request is authenticated');
+    }
+    else
+    {
+        alesadfdsafrt('Request is NOT authenticated');
+    ;
+
+
+    
+</script>

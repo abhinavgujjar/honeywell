@@ -15,13 +15,13 @@ namespace CricInfo.Controllers
         // GET: /Articles/
 
         [Log]
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm)
         {
             //a
             ViewData["SubTitle"] = "great Articles";
 
             //1. Prepare model
-            var articles = db.Articles.ToList();
+            var articles = db.Articles.Where(a => (String.IsNullOrEmpty( searchTerm ) ||  a.Body.Contains(searchTerm))) .ToList();
 
             var viewModels = new List<ArticleIndexViewModel>();
 
